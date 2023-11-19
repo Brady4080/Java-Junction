@@ -1,0 +1,78 @@
+<head>
+    <title>Final Project</title>
+    <link rel="stylesheet" type="text/css" href="/css/master.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+    <script src="/js/script.js"></script>
+<body>
+    <!-- navbar -->
+    <nav class="navBar">
+        <a href="{{ url_for('index') }}"><img src="images/coffee_logo.png"></a>
+        <div>
+            <ul>
+                <li id="navBar"><a href="{{ url_for('index') }}">Home</a></li>
+                <li id="navBar"><a href="{{ url_for('menu') }}">Menu</a></li>
+                <li id="navBar"><a href="{{ url_for('my_cart') }}">My Cart</a></li>
+                <li id="navBar"><a href="{{ url_for('about') }}">About</a></li>
+                <li id="navBar"><a href="{{ url_for('login') }}">Account</a></li>
+                <!-- admin link only appears for admin account -->
+                {% if session.name == 'admin' %}
+                    <li id="navBar"><a href="{{ url_for('admin_page') }}">Admin Dashboard</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- bottom banner -->
+    <div class="bottom_banner">
+        <div id="location">
+            <h1>Location</h1>
+            <h3>1400 University Blvd, Birmingham, AL 35294</h3>
+           
+            <div id="contact">
+                <h1>Find Us At</h1>
+                <div id="contact-icon">
+                    <img src="images/twittericon.png" id="contact_icon">
+                    <img src="images/metaicon.png" id="contact_icon">
+                    <img src="images/instaicon.png" id="contact_icon">
+                    <img src="images/yelpicon.png" id="contact_icon">
+                </div>
+                
+                <h1>Contact Us</h1>
+                <h3>(205) 934-8000</h3>
+                <h3>javajunction@madeup.com</h3>
+            </div>
+        </div>
+        
+        <div id="hours">
+            <h1>Hours</h1>
+            <h3>Monday-Thursday 7am-8pm</h3>
+            <h3>Friday 7am-3pm</h3>
+            <h3>Saturday 8am-3pm</h3>
+            <h3>Closed Sundays</h3>
+        </div>
+
+    </div>
+
+    <div class="disclaimer">
+        <h3><u>Disclaimer</u></h3>
+        <p>This coffee shop is made up and not actually real. It is not located in the Hill Student Center nor can you actually order and product</p>
+    </div>
+</body>
+
+<link rel="stylesheet" type="text/css" href="/css/master.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+    <script src="/js/script.js"></script>

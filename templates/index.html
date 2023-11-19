@@ -1,0 +1,76 @@
+{% extends "base2.html" %}
+
+{% block content %}
+
+<!-- Background image -->
+<div class="bgImage">
+    <div id="imageOverlay">
+        <h2>Welcome To</h2>
+        <h1>Java Junction</h1>
+        <p>Fuel Your Code with Java Junction: Where Great Coffee Meets Brilliant Code!</p>
+        <a href="{{ url_for('menu') }}"><button>Shop Now!</button></a>
+        <p>Or read more about us below!</p>
+    </div>
+</div>
+
+<!-- location banner -->
+<div class="location">
+    <h3><img src="images/location.png" class="locationimg">1400 University Blvd, Birmingham, AL 35294</h3>
+</div>
+
+<!-- history section -->
+<div class="history">
+    <div id="historytxt">
+        <div id="historytxt2">
+            <h2>WHO ARE WE?</h2>
+            <img src="images/coffee_logo.png" id="historylogo">
+            <h3>Java Junction!</h3>
+            <p>We are a made up cafe where any and everyone is welcome! This is a made up concept created in 2023.</p>
+            <a href="{{ url_for('about') }}"><button>read more</button></a>
+        </div>
+    </div>
+    <img src="images/history.jpg" id="historyimg">
+</div>
+<div class="history">
+    <img src="images/account_signup.jpg" id="historyimg">
+    <div id="historytxt3">
+        <div id="historytxt2">
+            <h2>Delievry or Pick-up!</h2>
+            <img src="images/coffee_logo.png" id="historylogo">
+            <h3>Order Online for Pick-up or Delivery</h3>
+            <p>Create and Account now so you can place your order!</p>
+            <a href="{{ url_for('login') }}"><button>create account</button></a>
+        </div>
+    </div>
+</div>
+
+<!-- order banner -->
+<div class="order_now">
+    <h1>ORDER NOW</h1>
+    <h3>Pick and Delivery - order now!</h3>
+    <a href="{{ url_for('menu') }}"><button>order</button></a>
+</div>
+
+<!-- map -->
+<div class="news_map">
+    <div id="newsletter">
+        <div id="newsletter_txt">
+            <h1>Newsletter</h1>
+            <h3>Sign up for our newsletter to keep up to date with us!</h3>
+            <input id="news_email" type="text" placeholder="Enter your email...">
+            <button>submit</button>
+        </div>
+    </div>
+
+    <div id="map"></div>
+</div>
+
+<!-- credits -->
+<div id="credits">
+    <h4>Names: Brady Phillips, Camden Smith, Connor Guess</h4>
+    <h4>Blazerid: blphilli, ctsmith7, CG2001</h4>
+    <h4>CS421 Final Project</h4>
+    <h2>⌄</h2>
+</div>
+
+{% endblock %}

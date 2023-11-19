@@ -1,0 +1,29 @@
+{% extends "base2.html" %}
+
+{% block content %}
+<div class="login_page">
+    <div class="login_box" id="register_form">
+        <h1 class="account_heading">Create an account!</h1>
+
+        <div class="input_box">
+            <form method="post" action="{{ url_for('register_pass_fail') }}">
+                <input type="text" name="username" placeholder="* Username" class="input_field" required>
+                <input type="password" name="password" placeholder="* Password" class="input_field" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="requirements">
+        <h2>Password Requirements</h2>
+        <p>* Password must contain an uppercased character.</p>
+        <p>* Password must contain a lowercased character.</p>
+        <p>* Password must end in a number.</p>
+        <p>* Password must be 8 or more characters.</p>
+
+        <h2>Username Requirements</h2>
+        <p>* Username must be 5 or more characters.</p>
+        <p>* Username must be unique.</p>
+    </div>
+</div>
+{% endblock %}

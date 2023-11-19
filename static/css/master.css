@@ -1,0 +1,900 @@
+/* 
+    || All Pages
+*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'sf_archery_blackregular';
+}
+
+@font-face {
+    font-family: 'Pier_sans_regular';
+    src: url('./Fonts/PPPierSans-Regular.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'sf_archery_blackregular';
+    src: url('./Fonts/SF_Archery_Black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(49, 47, 47);
+    color: white;
+}
+
+/* 
+    || Navbar 
+*/
+nav {
+    display: flex;
+    padding: 1% 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    height: 100px;
+    width: 100px;
+}
+
+#navBar {
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+
+#navBar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 12px;
+}
+
+#navBar a:hover {
+    background-color: #583d3a;
+    border-radius: 8%;
+}
+
+
+/* footer */
+.bottom_banner {
+    padding: 10vh 0vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.bottom_banner h1 {
+    color: #b98345;
+}
+
+#location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#hours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#contact-icon {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px
+}
+
+#contact_icon {
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+}
+
+
+/* 
+    || Home Page 
+        background image video https://www.youtube.com/watch?v=jAXF7oS0RB4&ab_channel=WebDevTutorials 
+        A lot of inspiration was took from a local coffee shop website: https://east59.net/
+*/
+
+.bgImage {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/landing_img.jpg);
+}
+/* @media allows me to change stuff for when certain conditions are met https://www.w3schools.com/cssref/css3_pr_mediaquery.php */
+@media (min-width: 960px) {
+    #imageOverlay {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-110%,-125%);
+        color: #fff;
+        padding: 0 70px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1920px) {
+    #imageOverlay {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-125%,-125%);
+        color: #fff;
+        padding: 0 70px;
+        text-align: center;
+    }
+}
+
+/* image overaly for the homepage */
+#imageOverlay button {
+    border: 1px solid white;
+    background: none;
+    font-size: x-large;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 16px;
+}
+
+
+#imageOverlay h1, h2, p {
+    font-family: 'sf_archery_blackregular';
+}
+
+/* made up location for homepage */
+.location {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.locationimg {
+    width: 15px;
+    height: auto;
+    padding: 0px 5px;
+}
+
+/* The History section for the home page / The account sign up part */
+.history {
+    display: flex;
+    flex-direction: row;
+}
+
+#historytxt {
+    width: 50%;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/historybg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#historytxt3 {
+    width: 50%;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/account_signupbg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+@media (min-width: 960px) {
+    #historytxt2 {
+        text-align: center;
+        transform: translate(-2%, 10%);
+    }
+}
+
+@media (min-width: 1920px) {
+    #historytxt2 {
+        text-align: center;
+        transform: translate(-2%,75%);
+    }
+}
+
+#historylogo {
+    width: 60px;
+    height: auto;
+    padding: 3% 0%;
+}
+
+#historyimg {
+    width: 50%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+}
+
+.history h2, h3, p {
+    font-family: 'sf_archery_blackregular';
+}
+
+.history button {
+    border: 1px solid white;
+    background: none;
+    font-size: medium;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 16px;
+}
+
+
+/* order now banner */
+.order_now {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.order_now h1, h3, button {
+    font-family: 'sf_archery_blackregular';
+    padding: 10px 20px;
+}
+
+.order_now button {
+    border: none;
+    background-color: #b98345;
+    font-size: x-large;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 16px;
+}
+
+/* news and map */
+
+.news_map {
+    display: flex;
+    flex-direction: row;
+}
+
+#newsletter {
+    text-align: center;
+    height: 800px;
+    width: 50%;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/newsletter.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#newsletter_txt {
+    transform: translate(0%,200%);
+}
+
+#news_email {
+    background: none;
+    padding: 10px;
+    height: 20px;
+    width: 300px;
+    border: 1px solid;
+    border-color: white;
+    border-radius: 16px;
+    color: white;
+    font-size: 18px;
+}
+
+#news_email::placeholder {
+    color: white;
+}
+
+#newsletter_txt button {
+    border: none;
+    background: #b98345;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 16px;
+}
+
+#map {
+    height: 800px;
+    width: 50%;
+}
+
+/* credits */
+#credits {
+    position: absolute;
+    top: 93vh;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    padding: 0 70px;
+    text-align: center;
+}
+
+.disclaimer {
+    text-align: center;
+}
+
+/* 
+    || Menu Page 
+*/
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.col-4 {
+    flex-basis: 31.33%; 
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.col-4:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.col-4 img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; 
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.col-4 .product-info {
+    flex-direction: row;
+}
+
+.product-info {
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-4 .product-info h4,
+.col-4 .product-info p,
+.col-4 .product-info button {
+    flex-basis: 33.33%;
+    text-align: center;
+}
+
+.product-info h4 {
+    margin: 0;
+}
+
+.product-info p {
+    margin: 0;
+}
+
+.product-info button {
+    margin-left: 10px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.small-container {
+    margin: auto;
+    max-width: 80%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.subtitle {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: white;
+}
+
+.add-to-cart-btn {
+    background-color: white;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 
+    || About Page 
+*/
+
+.about_banner {
+    width: 100%;
+    height: 35vh;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/about_banner.jpg);
+    position: relative;
+}
+
+.about_banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+}
+
+#about_Overlay {
+    text-align: center;
+    padding: 20px 0;
+    position: relative; 
+    color: #fff;
+}
+
+/* First about */
+.first_about_section {
+    text-align: center;
+    padding: 50px 20vh
+}
+
+.first_about_section h3 {
+    color: #b98345;
+}
+
+.first_about_section p {
+    padding: 10px 0px;
+}
+
+/* Why coffee section */
+.why_coffee {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+}
+
+#why_coffee_txt {
+    width: 50%;
+}
+
+#why_coffee_txt h3 {
+    color: #b98345;
+    padding: 0vh 0vh;
+}
+
+#why_coffee_pic {
+    width: 50%;
+    padding: 0vh 15vh;
+}
+
+#why_coffee_pic img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Meet the team section */
+.the_team {
+    margin-top: 10vh;
+}
+
+.the_team h1, h3 {
+    padding: 10px 17vh;
+}
+
+.the_team h3 {
+    color: #b98345;
+}
+
+#profile_pics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#profile_pics img {
+    padding: 20px 20px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#profile_pics_names {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+#profile_pics_names h3 {
+    padding: 20px 18vh;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 
+    || Login and Register Pages
+*/
+
+.login_page h1 {
+    margin-top: 10%;
+    text-align: center;
+}
+
+#login_form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgb(49, 47, 47);
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 100px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#register_form {
+    max-width: 400px;
+    margin: 20px auto; 
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.24);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#register_form a {
+    color: #fff; 
+    text-decoration: none;
+    font-size: 16px; 
+    padding: 12px 20px; 
+    background-color: #fff; 
+    border-radius: 4px;
+    display: block; 
+    margin: 20px auto 0; 
+}
+
+.login_box {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.24);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px; 
+    position: relative;
+}
+
+.input_box {
+    background-color: rgb(49, 47, 47); 
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px; 
+}
+
+.input_box .input_field {
+    display: block;
+    width: 100%;
+    margin: 20px 0; 
+    padding: 10px; 
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.account_heading {
+    margin-bottom: 20px;
+}
+
+.input_field {
+    padding: 15px;
+}
+
+#login_username,
+#login_password {
+    display: block;
+    width: 100%;
+    margin: 15px 0; 
+    padding: 10px; 
+    font-size: 16px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+}
+
+button[type="submit"],
+#register_button {
+    display: block;
+    margin-top: 20px;
+    margin: 20px auto 0; 
+    padding: 8px 20px; 
+    font-size: 16px;
+    background-color: #fff; 
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#register_button a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px; 
+    padding: 8px 20px; 
+    border-radius: 4px;
+    display: block; 
+}
+
+.requirements {
+text-align: center;
+}
+/*
+    ||Successful Login Welcome Page
+*/
+.center_container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    height: 40vh;
+  }
+
+
+  .welcome_message {
+    display: inline-block;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.24); 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px; 
+  }
+
+
+  .logout_button {
+    padding: 10px 20px;
+    background-color: #fff; 
+    color: #000;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .logout_button:hover {
+    background-color: #f2f2f2; 
+  }
+
+/*
+    ||Successful Account Creation Page
+*/
+
+.centered_content {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    height: 40vh;
+}
+
+.centered_content h1 {
+    display: inline-block;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.24); 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #fff; 
+    color: #000;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #f2f2f2;
+}
+
+/* 
+    ||My Cart Page 
+*/
+
+.empty_cart_message {
+    text-align: center; 
+    margin-top: 100px; 
+    color: #fff; 
+}
+
+.remove_item_button {
+    padding: 6px 12px; 
+    font-size: 14px; 
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    align-self: center; 
+}
+
+.cart_item_box {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: rgba(0, 0, 0, 0.24);;
+    color: #fff; 
+    padding: 10px; 
+    border-bottom: 1px solid #ddd; 
+    margin-left: 500px; 
+    margin-right: 500px;
+}
+
+.cart_item_details span:not(:last-child)::after {
+    content: " |"; 
+    margin: 0 5px; 
+}
+
+.total_price {
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* 
+    ||Admin Page
+*/
+
+.orders_box {
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+}
+
+#orders_textarea {
+    width: 100%;
+    height: 500px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+  .admin_page {
+    text-align: center;
+  }
+
+  .admin_page input {
+    display: block; 
+    margin: 10px auto; 
+    width: 60%; 
+    max-width: 300px; 
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+  }
+
+  .admin_page button {
+    display: block; 
+    margin: 10px auto; 
+    margin-bottom: 30px;
+    padding: 10px 20px; 
+    background-color: #fff; 
+    color: black; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+  }
+
+  .admin_page button:hover {
+    background-color: #f2f2f2; 
+  }
+
+  .orders_box {
+    text-align: left; 
+    margin-top: 20px; 
+    max-width: 1000px; 
+  }
+  
+  .orders_box textarea {
+    width: 100%; 
+    height: 200px; 
+    padding: 8px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    resize: vertical; 
+    line-height: 2.0; 
+  }
+
+  .new_items_container {
+    display: flex; 
+    align-items: center; 
+  }
+
+  .new_items_label {
+    margin-right: 10px; 
+  }
+
+  .surrounding_box {
+    background-color: rgba(0, 0, 0, 0.24); 
+    padding: 20px; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin: 20px auto; 
+    max-width: 600px; 
+  }
+
+/*
+    ||Order Placed Page
+*/
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh; 
+  }
+
+  .button {
+    display: block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+
+  .order-placed {
+    background-color: rgba(0, 0, 0, 0.24);
+    color: white;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 4px;
+  }

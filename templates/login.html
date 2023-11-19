@@ -1,0 +1,34 @@
+{% extends "base2.html" %}
+
+{% block content %}
+
+{% if session.name %}
+    <!-- successful login message -->
+    <div class="center_container">
+        <div class="welcome_message">
+            Welcome! {{ session.name }}.
+        </div>
+        
+        <!-- logout button -->
+        <button class="logout_button" onclick="window.location.href='{{ url_for('logout') }}'">Logout</button>
+    </div>
+{% else %}
+
+<!-- login page -->
+<!-- how to make login : https://www.w3schools.com/howto/howto_css_login_form.asp-->
+<!-- data base video: https://www.youtube.com/watch?v=c2M-rlkkT5o&ab_channel=BroCode -->
+<div class="login_page">
+    <div class="login_box">
+        <h1>{{ output }}</h1>
+        <h1>Sign in or create an account</h1>
+        <form id="login_form" method="post" action="{{url_for('login')}}"> 
+            <input id="login_username" type="text" name="login_username" placeholder="* Username" required>
+            <input id="login_password" type="password" name="login_password" placeholder="* Password" required>
+            <button type="submit">Sign In</button>
+        </form>
+        <button id="register_button" type="button"><a href="{{ url_for('register') }}">Register Now</a></button>
+    </div>
+</div>
+
+{% endif %}
+{% endblock %}

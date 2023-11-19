@@ -1,0 +1,31 @@
+{% extends "base2.html" %}
+
+{% block content %}
+
+{% if cart_items %}
+    {% for item in cart_items %}
+        <div class="cart_item_box">
+            <div class="cart_item_details">
+                <span>{{item}}</span>
+                <span>Quantity: {{cart_items[item]}}</span>
+                <span>Price: ${{item_prices[loop.index0]}}</span>
+            </div>
+            <form action="{{ url_for('my_cart_remove') }}" method="POST">
+                <input type="hidden" name="item_name" value="{{ item }}">
+                <input type="hidden" name="item_quantity" value="{{ cart_items[item] }}">
+                <button type="submit" class="remove_item_button">Remove Item</button>
+            </form>
+        </div>
+    {% endfor %}
+
+    <h2 class="total_price">Total: ${{cart_price}}</h2>
+
+    <form action="{{ url_for('place_order') }}" method="POST">
+        <button type="submit">Place Order</button>
+    </form>
+
+    {% else %}
+    <h1 class="empty_cart_message">Your cart is empty</h1>
+{% endif %}
+
+{% endblock %}

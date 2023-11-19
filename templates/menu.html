@@ -1,0 +1,105 @@
+{% extends "base2.html" %}
+
+{% block content %}
+
+<div class="small-container">
+    <h2 class="subtitle">Drinks</h2>
+    <div class="row">
+
+    <!-- loop through drink items -->
+    {% for item in drink_items %}
+        <div class="col-4">
+            <form action="{{ url_for('my_cart_add') }}" method="POST">
+                <img src={{item.item_image}}>
+                <h4>{{item.item_name}}</h4>
+                <p>${{item.item_price}}</p>
+                <p>Inventory: {{item.item_count}}</p>
+                {% if item.item_count == 0 %}
+                    <button disabled>Out of Stock</button>
+                {% else %}
+                    <input type="hidden" name="product_id" value="{{item.item_name}}">
+                    <button type="submit">Add to Cart</button>
+                {% endif %}
+            </form>
+        </div>
+    {% endfor %}
+
+    </div>
+</div>
+
+<div class="small-container">
+    <h2 class="subtitle">Food</h2>
+    <div class="row">
+
+    <!-- loop through food items -->
+    {% for item in food_items %}
+        <div class="col-4">
+            <form action="{{ url_for('my_cart_add') }}" method="POST">
+                <img src={{item.item_image}}>
+                <h4>{{item.item_name}}</h4>
+                <p>${{item.item_price}}</p>
+                <p>Inventory: {{item.item_count}}</p>
+                {% if item.item_count == 0 %}
+                    <button disabled>Out of Stock</button>
+                {% else %}
+                    <input type="hidden" name="product_id" value="{{item.item_name}}">
+                    <button type="submit">Add to Cart</button>
+                {% endif %}
+            </form>
+        </div>
+    {% endfor %}
+
+    </div>
+</div>
+
+<div class="small-container">
+    <h2 class="subtitle">Coffee Beans</h2>
+    <div class="row">
+
+    <!-- loop through bean items -->
+    {% for item in bean_items %}
+        <div class="col-4">
+            <form action="{{ url_for('my_cart_add') }}" method="POST">
+                <img src={{item.item_image}}>
+                <h4>{{item.item_name}}</h4>
+                <p>${{item.item_price}}</p>
+                <p>Inventory: {{item.item_count}}</p>
+                {% if item.item_count == 0 %}
+                    <button disabled>Out of Stock</button>
+                {% else %}
+                    <input type="hidden" name="product_id" value="{{item.item_name}}">
+                    <button type="submit">Add to Cart</button>
+                {% endif %}
+            </form>
+        </div>
+    {% endfor %}
+
+    </div>
+</div>
+
+<div class="small-container">
+    <h2 class="subtitle">Merchandise</h2>
+    <div class="row">
+
+    <!-- loop through merch items -->
+    {% for item in merch_items %}
+        <div class="col-4">
+            <form action="{{ url_for('my_cart_add') }}" method="POST">
+                <img src={{item.item_image}}>
+                <h4>{{item.item_name}}</h4>
+                <p>${{item.item_price}}</p>
+                <p>Inventory: {{item.item_count}}</p>
+                {% if item.item_count == 0 %}
+                    <button disabled>Out of Stock</button>
+                {% else %}
+                    <input type="hidden" name="product_id" value="{{item.item_name}}">
+                    <button type="submit">Add to Cart</button>
+                {% endif %}
+            </form>
+        </div>
+    {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}
